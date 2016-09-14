@@ -8,14 +8,24 @@
     <meta charset="UTF-8">
     <title>Test Web Site</title>
 </head>
-<body>
-    <nav class="w3-sidenav w3-blue" style="width:25%">
-        <a href="index.html">Home</a>
-        <a href="page1.html">Page 1</a>
-        <a href="page2.html">Page 2</a>
+<body class="w3-theme-d4">
+    <ul class="w3-navbar w3-green">
+        <li><a onclick="showContent('home.html')">Home</a></li>
+        <li><a onclick="showContent('page1.html')">Page 1</a></li>
+        <li><a onclick="showContent('page2.html')">Page 2</a></li>
+    </ul>
+
+    <nav class="w3-sidenav w3-blue" style="width:200px">
+        <a onclick="showContent('home.html')">Home</a>
+        <a onclick="showContent('page1.html')">Page 1</a>
+        <a onclick="showContent('page2.html')">Page 2</a>
     </nav>
-    <div>
-        <iframe src="home.html" frameborder="0"  style="margin-left:25%"></iframe>
+
+    <div id="contentDiv" style="margin-left:200px">
+        <button></button>
     </div>
+    
+    <script src="scripts/jquery-3.1.0.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
 </html>                 

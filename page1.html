@@ -7,26 +7,19 @@
     <meta charset="UTF-8">
     <title>Page 1</title>
 </head>
-<body>
-    <script src="/scripts/app.js">
+<body class="w3-theme-d5">
+    <!--<script src="/scripts/app.js">
     // function Button2Clicked() {
     //     document.body.style.backgroundColor = "powder-blue"; 
     // }
             
-    </script>  
+    </script>  -->
 
-    
-
-    <ul class="w3-navbar w3-green">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="page1.html">Page 1</a></li>
-        <li><a href="page2.html">Page 2</a></li>
-    </ul>
     <h1>This is the first page other than the index</h1>
+    <div id="map" style="width:400px;height:400px"></div>
     <button onclick="buttonOneClicked()">Button 1</button>
     <button onclick="Button2Clicked()">Button 2</button>
-    <button>Button 3</button>
-    <div id="map" style="width:400px;height:400px;background:yellow"></div>
+    <button onclick="placeMarker(map, point1)">Button 3</button>
 
     <script>
     function myMap() {
@@ -37,9 +30,10 @@
         }
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
     }
-    </script>
+    var point1 = new google.maps.LatLng(48.46, -123.43);
+     </script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 
 
 </body>
